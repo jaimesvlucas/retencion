@@ -16,11 +16,11 @@
            int salario= Integer.parseInt(request.getParameter("salario"));
            if(salario<=1000){
         %>
-        <p>El salario de <%= nombre%> es <%=salario%></p>
+        <p>El salario neto de <%= nombre%> es <%=salario%> , tiene una retencion de 0% y su salario bruto es de <%= salario%></p>
         <% }else if((salario>1000) || (salario<=3000)){%>
-        <p>El salario de <%= nombre%> es <%=salario-(salario*0.1)%></p>
+        <p>El salario neto de <%= nombre%> es <%=salario-(salario*0.1)%>, tiene una retencion de 10% y su salario bruto es de <%= salario%> </p>
         <%}else if(salario<3000){%>
-        <p>El salario de <%= nombre%> es <%=salario-(salario*0.2)%></p>
+        <p>El salario neto de <%= nombre%> es <%=salario-(salario*0.2)%>, tiene una retencion de 20% y su salario bruto es de <%= salario%></p>
         <%}else{}%>
         <a href="index.jsp">Volver al index</a>
     </body>
